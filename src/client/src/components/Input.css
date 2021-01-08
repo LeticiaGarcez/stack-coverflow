@@ -1,0 +1,8 @@
+.input_busca {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 5%;
+    width: 60%;
+  }

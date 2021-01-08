@@ -5,6 +5,9 @@
 .App-logo {
   width: 50%;
   height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .App-header {
@@ -20,4 +23,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.login {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  text-align: center;  
 }

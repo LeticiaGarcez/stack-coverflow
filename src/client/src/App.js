@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import AppUI from './AppUI.js'
 
-class App extends Component {
+export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = { apiResponse: "" };
@@ -51,5 +51,3 @@ class App extends Component {
         );
     }
 }
-
-export default App;
