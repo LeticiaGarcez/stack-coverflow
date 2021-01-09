@@ -1,53 +1,26 @@
-import React, { Component } from "react";
+import React from 'react'
+import logo from "./logo.png";
+import Input from "../src/components/Input"
 import "./App.css";
-import AppUI from './AppUI.js'
+import LoginGoogle from "../src/login/LoginGoogle"
 
-export default class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { apiResponse: "" };
+const AppUI = ({}) =>
+  <React.Fragment>
+    {
+      <div className="App">            
+          <img src={logo} className="App-logo" alt="logo" />      
+      </div>
+
     }
 
-    callAPI() {
-/*
-      fetch(getResource, {
-        headers: requestHeaders(context)
-      })
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('API error: Failed to fetch');
-            }
-            return response.json()
-          })
-          .then(json => {
-            updateImageUrlWithTumborUrl(URLUtils.getThumborUrl(context), json)
-            console.log(getResource, json)
-            callback(json)
-          })
-          .catch(error => {
-            error.number = 401
-            context.onApiError(error)
-          })
-      }*/
-        fetch("http://localhost:9000/testAPI")
-          .then(response => {
-            if (!response.ok)
-              throw new Error('API error: Failed to fetch');
+    <Input />
 
-            return response.json()
-          })
-          .catch(err => err);
-    }
+    {/*
+      <footer className='login'>          
+          <LoginGoogle />
+      </footer>
+    */}
 
-    componentDidMount() {
-        this.callAPI();
-    }
+  </React.Fragment>
 
-    render() {
-        return (
-             <AppUI 
-                apiResponse={this.state.apiResponse}
-             />
-        );
-    }
-}
+export default AppUI

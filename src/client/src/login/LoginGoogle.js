@@ -52,7 +52,7 @@ class LoginGoogle extends Component {
           onLogoutSuccess={ this.logout }
           onFailure={ this.handleLogoutFailure }
         >
-        </GoogleLogout>: <GoogleLogin
+        </GoogleLogout> : <GoogleLogin
           clientId={ CLIENT_ID }
           buttonText='Login with Google'
           onSuccess={ this.login }

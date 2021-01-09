@@ -1,18 +1,30 @@
 import React from 'react'
-import logo from "./logo.svg";
+import Button from '../components/Button';
 import "./SearchUI.css";
 
-const SearchUI = ({apiResponse}) =>
-  <React.Fragment>
-    {
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1 className="App-title">Welcome to React</h1>
-            </header>
-                <h1 className="App-intro">{apiResponse}</h1>
-        </div>
-    }
-  </React.Fragment>
-
+const SearchUI = ({ apiResponse }) => { 
+  return (
+    <>
+      <div className='title_result'>Resultados da busca</div><br></br><br></br>
+      <div>
+        <ul className='results'>  
+          {apiResponse.items.map(item => 
+              <>
+                <ListResult 
+                  key={item}
+                  itemLink={item.link}
+                  itemTitle={item.title}
+                />
+                <br></br>
+              </>
+          )}
+        </ul>
+      </div>
+    </>
+  );
+}
 export default SearchUI
+
+const ListResult = ({ itemLink, itemTitle }) => {
+  return <a className='link' href={itemLink}>{itemTitle}<br></br></a>
+}
