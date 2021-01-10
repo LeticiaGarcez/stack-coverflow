@@ -1,29 +1,36 @@
 import React from 'react'
-import Button from '../components/Button';
-import "./SearchUI.css";
+import Button from '../components/Button'
+import NoSearch from './NoSearch'
+import "./SearchUI.css"
 
-const SearchUI = ({ apiResponse }) => { 
-  return (
-    <>
-      <div className='title_result'>Resultados da busca</div><br></br><br></br>
-      <div>
-        <ul className='results'>  
-          {apiResponse.items.map(item => 
-              <>
-                <ListResult 
-                  key={item}
-                  itemLink={item.link}
-                  itemTitle={item.title}
-                />
-                <br></br>
-              </>
-          )}
-        </ul>
-      </div>
-    </>
-  );
+export default class SearchUI extends React.Component {
+  render() {
+    return (
+      this.props.apiResponse.items.length > 0 ?
+      <>
+        <div className='title_result'>Resultados da busca</div><br></br><br></br>
+        <div>
+          <ul className='results'>  
+            {this.props.apiResponse.items.map(item => 
+                <>
+                  <ListResult 
+                    key={item}
+                    itemLink={item.link}
+                    itemTitle={item.title}
+                  />
+                  <br></br>
+                </>
+            )}
+          </ul>
+        </div>
+        <Button
+          label = {'< Voltar'}
+        />
+      </>
+      :
+        <NoSearch />
+    )};
 }
-export default SearchUI
 
 const ListResult = ({ itemLink, itemTitle }) => {
   return <a className='link' href={itemLink}>{itemTitle}<br></br></a>

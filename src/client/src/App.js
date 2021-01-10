@@ -1,11 +1,10 @@
 import React from 'react'
-import logo from "./logo.png";
+import logo from "./images/logo.png";
 import Input from "../src/components/Input"
 import "./App.css";
-import LoginGoogle from "../src/login/LoginGoogle"
 
-const AppUI = ({}) =>
-  <React.Fragment>
+const AppUI = () =>
+  <React.Fragment>    
     {
       <div className="App">            
           <img src={logo} className="App-logo" alt="logo" />      

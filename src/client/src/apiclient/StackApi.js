@@ -1,4 +1,4 @@
-const request = 'http://localhost:9000/search?'
+const request = 'http://localhost:9000/search?question='
 
 const StackApi = {
   get: (keySearch, callback) => {

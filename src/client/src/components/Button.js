@@ -1,14 +1,22 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
-import App from '../App'
 import './Button.css'
 
-const Button = ({ label }) => {
+export default class Button extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-  return <React.Fragment>
-    <button className='button'>{label}</button>
-  </React.Fragment>
+  handleClick(event) {
+    window.location = '/stack'
+    event.preventDefault();
+  }
+
+  render() {
+    return(
+      <button className='button' onClick={this.handleClick}>{this.props.label}</button>
+  )};
 
 }
-export default Button
 

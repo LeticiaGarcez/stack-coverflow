@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from './Button';
 import StackApi from '../apiclient/StackApi'
 import './Input.css'
 import SearchUI from '../pages/SearchUI';
@@ -37,7 +36,7 @@ export default class Input extends React.Component {
         {!this.state.resultSearch ?               
           <>           
               <input type="text" className = 'input_busca' value={this.state.value} onChange={this.handleChange} />
-              <Button label = {'Pesquisar'} />
+              <button className='button'>{'Pesquisar'}</button>
           </>
          :
 

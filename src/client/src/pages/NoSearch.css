@@ -1,0 +1,12 @@
+.title_no_search {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.img_no_search {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
