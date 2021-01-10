@@ -32,12 +32,12 @@ $ npm start
 
 ## How to test
 
-###- To access the entire application:
+### - To access the entire application:
 ```
 http://localhost:3000/stack
 ```
 
-###- If you want to test only de backend:
+### - If you want to test only de backend:
 ```
 http://localhost:9000/search?question=Null%20Pointer%20Exception
 ```

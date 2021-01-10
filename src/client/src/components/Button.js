@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'carbon-components-react';
 import './Button.css'
 
 export default class ButtonUI extends React.Component {
@@ -15,7 +14,7 @@ export default class ButtonUI extends React.Component {
   }
 
   render() {
-    return <Button className = 'button' onClick={this.handleClick}>{this.props.label}</Button>
+    return <button className='button' onClick={this.handleClick}>{this.props.label}</button>
   };
 }
 
