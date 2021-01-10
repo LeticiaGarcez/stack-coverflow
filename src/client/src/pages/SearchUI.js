@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../components/Button'
+import ButtonUI from '../components/Button'
 import NoSearch from './NoSearch'
 import "./SearchUI.css"
 
@@ -23,7 +23,7 @@ export default class SearchUI extends React.Component {
             )}
           </ul>
         </div>
-        <Button
+        <ButtonUI
           label = {'< Voltar'}
         />
       </>
