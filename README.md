@@ -1,4 +1,4 @@
-#Stack Coverflow
+# Stack Coverflow
 
 This application was developed to search solutions for computacionals erros, which
 the user will insert in a field search.
@@ -6,14 +6,14 @@ the user will insert in a field search.
 To attend this goal, a React frontend and NodeJS backend was developed. The backend
 uses Stack Overflow API to show all the results of the search.
 
-##Requisites
+## Requisites
 * Node 12.x
 
-##How to use
+## How to use
 The backend and frontend are in the same project. This way, to run locally, you need to 
 start backend and after that, start the frontend.
 
-##How to run
+## How to run
 
 To run the backend application, follow the steps:
 ```
@@ -30,7 +30,7 @@ $ npm install
 $ npm start
 ```
 
-##How to test
+## How to test
 
 ###- To access the entire application:
 ```
