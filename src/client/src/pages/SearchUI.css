@@ -12,3 +12,14 @@
 .link {
     color: #4843a1;
 }
+
+@media screen and (max-width: 415px) {
+    .title_result {
+        margin-top: 3em;
+    }
+    
+    .results {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

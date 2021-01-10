@@ -15,11 +15,24 @@
     display: flex;
     margin-top: 5%;
 
-    background-color: #3f37cb; /* Green */
+    background-color: #3f37cb;
     border: 0;
     color: white;
     padding: 11px 32px;
     text-decoration: none;
     font-size: 16px;
     border-radius: 3px;
+}
+
+@media screen and (max-width: 415px) {
+    .input_busca {
+        margin-top: 7em;
+        font-size: 16px;
+        width: 75%;
+    }
+    
+    .button {
+        margin-top: 20%!important;
+        font-size: 13px!important;
+    }
 }
